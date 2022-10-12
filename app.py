@@ -25,7 +25,8 @@ def recommend(movie):
     return recommended_movie_names,recommended_movie_posters
 
 
-st.header('Movie Recommender System By Nishit Thakkar')
+# st.header('Movie Recommender System By Nishit Thakkar')
+st.header('Movie Recommender System')
 movies_dict = pickle.load(open('movie_list.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 similarity = pickle.load(open('similarity.pkl','rb'))
@@ -56,8 +57,8 @@ if st.button('Show Recommendation'):
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
 
-url = "https://drive.google.com/file/d/1k1-NGrQOzMWZbmmkS4FKRSuV4_8-aJM3/view?usp=sharing"
-st.write("My Resume :- [link](%s)" % url)
+# url = "https://drive.google.com/file/d/1k1-NGrQOzMWZbmmkS4FKRSuV4_8-aJM3/view?usp=sharing"
+# st.write("My Resume :- [link](%s)" % url)
 
 # st.markdown("check out this [link](%s)" % url)
 
